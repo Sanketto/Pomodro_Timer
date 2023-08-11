@@ -1,6 +1,7 @@
 import './App.css';
 import React, {useState, useEffect} from 'react';
 import {GoogleLogin} from '@react-oauth/google'
+import Timer from './components/Timer/Timer';
 function App() {
 
   const responseMsg = (res)=>{
@@ -12,9 +13,10 @@ function App() {
 
   return (
   
-      <div>
-         <GoogleLogin onSuccess={responseMsg} onError={errorMsg}/>
-      </div>
+      // <div>
+      //    <GoogleLogin onSuccess={responseMsg} onError={errorMsg}/>
+      // </div>
+      <Timer/>
   );
   
 }
