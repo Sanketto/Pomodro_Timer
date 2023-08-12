@@ -1,23 +1,19 @@
+import {useState } from 'react';
 import './App.css';
-import React, {useState, useEffect} from 'react';
-import {GoogleLogin} from '@react-oauth/google'
-import Timer from './components/Timer/Timer';
+import AppRouter from './components/AppRouter';
+import UserContext from './components/Context';
 
 function App() {
-
-  const responseMsg = (res)=>{
-    console.log(res);
-  }
-  const errorMsg =(err)=>{
-    console.log(err);
-  }
-
+ const [user, setUser] = useState()
+ const [ profile, setProfile ] = useState([]);
+ 
   return (
-  
-      // <div>
-      //    <GoogleLogin onSuccess={responseMsg} onError={errorMsg}/>
-      // </div>
-      <Timer/>
+    <UserContext.Provider value={{user, setProfile, setUser, profile}}>
+    <div>
+      <h2>Its Time</h2>
+        <AppRouter/>
+      </div>
+      </UserContext.Provider>
   );
   
 }

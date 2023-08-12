@@ -50,7 +50,20 @@
     background-color: blue;
 }
 
+#btn-logout{
+    background-color: yellow;
+    color: black;
+    width: fit-content;
+    margin: 0 auto;
+}
+
 .grayed  {
     background-color: lightslategray !important;
     color: white !important;
+}
+
+.btn:hover{
+    cursor: pointer;
+    transition: 300ms;
+    transform: scale(1.2);
 }
