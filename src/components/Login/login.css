@@ -1,0 +1,14 @@
+.login-container{
+    width: fit-content;
+    margin: 10% auto;
+    border: 2px solid black;
+    border-radius: 1rem;
+    padding: 2%;
+    background: -webkit-linear-gradient(to right, #007991, #78ffd6);
+    background: linear-gradient(to right, #007991, #78ffd6);
+}
+
+.login-container > h3{
+    text-align: center;
+    color: black;
+}
