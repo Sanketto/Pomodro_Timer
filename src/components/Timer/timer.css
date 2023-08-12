@@ -9,6 +9,13 @@
     background: linear-gradient(to right, #007991, #78ffd6);
 }
 
+.timer-container > p{
+    width: fit-content;
+    font-size: 1rem;
+    margin: 0 auto;
+    color: purple;
+}
+
 .timer-controls{
     display: flex;
     width: 90%;
@@ -41,4 +48,9 @@
 
 #btn-reset{
     background-color: blue;
+}
+
+.grayed  {
+    background-color: lightslategray !important;
+    color: white !important;
 }
