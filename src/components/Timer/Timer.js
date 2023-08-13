@@ -31,12 +31,10 @@ export default function Timer() {
                     if (prevSec === 0) {
                         setMinutes((prevMin) => {
                             if (prevMin > 0) {
-                                console.log("1");
                                 setSeconds(59)
                                 return prevMin - 1
                             }
                             else {
-                                console.log("2");
                                 setBreakTime((prev) => {
                                     if (!prev) {
                                         setSeconds(0);
@@ -56,7 +54,6 @@ export default function Timer() {
                         })
                     }
                     else {
-                        console.log("3");
                         return prevSec - 1
                     }
                 })
