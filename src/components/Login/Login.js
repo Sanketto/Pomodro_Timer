@@ -23,7 +23,13 @@ export default function Login() {
     return <>
         <div className="login-container">
             <h3>Login</h3>
-            <GoogleLogin onSuccess={responseMsg} onError={errorMsg} />
+            <GoogleLogin 
+                shape="circle"
+                theme="filled_blue"
+                text="signin_with"
+             onSuccess={responseMsg} onError={errorMsg} />
+             <div className="spacer"></div>
+
         </div>
     </>
 }

@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React, { Children, useContext } from "react";
 import { useState } from "react";
 import './timer.css'
 import { useEffect } from "react";
 import { googleLogout } from "@react-oauth/google";
 import UserContext from "../Context";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export default function Timer() {
     const [minutes, setMinutes] = useState(25)
@@ -18,9 +18,6 @@ export default function Timer() {
     })
     const { profile, setProfile, setUser } = useContext(UserContext)
     const navigate = useNavigate()
-    useEffect(() => {
-        if (profile.length == 0) navigate('/')
-    })
     const startTimer = () => {
         setControls(prev => ({
             start: true,
@@ -97,10 +94,12 @@ export default function Timer() {
 
     const logOut = () => {
         googleLogout();
-        setProfile(null)
-        setUser(null)
+        setProfile()
+        setUser()
         navigate('/')
     };
+    if (profile == null || profile.length == 0) return <Navigate to='/'/>
+    else{
 
     return <>
         <div className="timer-container">
@@ -122,4 +121,5 @@ export default function Timer() {
 
         </div>
     </>
+    }
 }
