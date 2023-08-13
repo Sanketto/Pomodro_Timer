@@ -3,12 +3,16 @@
     margin: 10% auto;
     border: 2px solid black;
     border-radius: 1rem;
-    padding: 2%;
+    padding: 2% 5%;
     background: -webkit-linear-gradient(to right, #007991, #78ffd6);
     background: linear-gradient(to right, #007991, #78ffd6);
 }
 
 .login-container > h3{
     text-align: center;
+    margin-top: 5%;
     color: black;
+    font-size: 2rem;
 }
+
+
